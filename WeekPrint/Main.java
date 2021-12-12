@@ -24,7 +24,7 @@ public class Main {
 
         //둠스데이의 요일 구하기
         int yearTen = year % 100;
-        int yearThounds = year - yearTen;
+        int yearThounds = (year - yearTen)/100;
 
         int ankerday = 0;
         if (yearThounds % 4 == 0) {
@@ -36,6 +36,9 @@ public class Main {
         } else if (yearThounds % 4 == 3) {
             ankerday = 3;
         }
+
+        int a = yearTen % 12;
+        int b = yearTen / 12;
 
         int doomsDays = ((yearTen % 12) + (yearTen / 12) + ((yearTen % 12) / 4) + ankerday) % 7;
         //0,1,2,3,4,5,6 = 일,월,화,수,목,금,토
@@ -141,8 +144,19 @@ public class Main {
                 if (calender[4][1] == 0) {
                     System.out.println(week + "주차는" + " " + "해당 월에 존재하지 않습니다.");
                     break;
-                } else {
+                } else if(calender[5][0] == 0){
                     System.out.println(week + "주차는" + " " + calender[4][1] + "일부터" + calender[lastDayX][lastDayY] + "일까지 입니다.");
+                    break;
+                } else if(calender[5][1] != 0){
+                    System.out.println(week + "주차는" + " " + calender[4][1] + "일부터" + calender[5][0] + "일까지 입니다.");
+                    break;
+                }
+            case 6:
+                if ((calender[5][0] == 0) & (calender[5][1] == 0)) {
+                    System.out.println(week + "주차는" + " " + "해당 월에 존재하지 않습니다.");
+                    break;
+                } else {
+                    System.out.println(week + "주차는" + " " + calender[5][1] + "일부터" + calender[lastDayX][lastDayY] + "일까지 입니다.");
                     break;
                 }
 
