@@ -10,7 +10,7 @@ public class FirstDayCheck {
     public static int[] monthDaysArr = {31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     public static int doomsDays;
 
-    void firstDaysCheck(){
+    void firstDaysCheck() {
         switch (InputCheckDays.month) {
             case 1:
                 doomsDays = january(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
@@ -191,6 +191,31 @@ public class FirstDayCheck {
                     doomsDays = 0;
                     break;
             }
+        }else if(leapYear == 1) { //3월 7일 -6
+            monthDaysArr[1] = 29;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 1;
+                    break;
+                case 1:
+                    doomsDays = 2;
+                    break;
+                case 2:
+                    doomsDays = 3;
+                    break;
+                case 3:
+                    doomsDays = 4;
+                    break;
+                case 4:
+                    doomsDays = 5;
+                    break;
+                case 5:
+                    doomsDays = 6;
+                    break;
+                case 6:
+                    doomsDays = 0;
+                    break;
+            }
         }
         return doomsDays;
     }
@@ -199,6 +224,31 @@ public class FirstDayCheck {
         //0,1,2,3,4,5,6 = 일,월,화,수,목,금,토
         if (leapYear == 0) { //4월 4일 -3
             monthDaysArr[1] = 28;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 4;
+                    break;
+                case 1:
+                    doomsDays = 5;
+                    break;
+                case 2:
+                    doomsDays = 6;
+                    break;
+                case 3:
+                    doomsDays = 0;
+                    break;
+                case 4:
+                    doomsDays = 1;
+                    break;
+                case 5:
+                    doomsDays = 2;
+                    break;
+                case 6:
+                    doomsDays = 3;
+                    break;
+            }
+        }else if(leapYear == 1) { //4월 4일 -3
+            monthDaysArr[1] = 29;
             switch (doomsDays) {
                 case 0:
                     doomsDays = 4;
@@ -253,6 +303,31 @@ public class FirstDayCheck {
                     doomsDays = 5;
                     break;
             }
+        }else if(leapYear == 1) { //5월 9일 -8(-7 + -1)
+            monthDaysArr[1] = 29;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 6;
+                    break;
+                case 1:
+                    doomsDays = 0;
+                    break;
+                case 2:
+                    doomsDays = 1;
+                    break;
+                case 3:
+                    doomsDays = 2;
+                    break;
+                case 4:
+                    doomsDays = 3;
+                    break;
+                case 5:
+                    doomsDays = 4;
+                    break;
+                case 6:
+                    doomsDays = 5;
+                    break;
+            }
         }
         return doomsDays;
     }
@@ -261,6 +336,31 @@ public class FirstDayCheck {
         //0,1,2,3,4,5,6 = 일,월,화,수,목,금,토
         if (leapYear == 0) { //6월 6일 -5
             monthDaysArr[1] = 28;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 2;
+                    break;
+                case 1:
+                    doomsDays = 3;
+                    break;
+                case 2:
+                    doomsDays = 4;
+                    break;
+                case 3:
+                    doomsDays = 5;
+                    break;
+                case 4:
+                    doomsDays = 6;
+                    break;
+                case 5:
+                    doomsDays = 0;
+                    break;
+                case 6:
+                    doomsDays = 1;
+                    break;
+            }
+        }else if(leapYear == 1) { //6월 6일 -5
+            monthDaysArr[1] = 29;
             switch (doomsDays) {
                 case 0:
                     doomsDays = 2;
@@ -315,6 +415,31 @@ public class FirstDayCheck {
                     doomsDays = 3;
                     break;
             }
+        }else if (leapYear == 1) { //7월 11일 -10 ( -7 + -3 )
+            monthDaysArr[1] = 29;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 4;
+                    break;
+                case 1:
+                    doomsDays = 5;
+                    break;
+                case 2:
+                    doomsDays = 6;
+                    break;
+                case 3:
+                    doomsDays = 0;
+                    break;
+                case 4:
+                    doomsDays = 1;
+                    break;
+                case 5:
+                    doomsDays = 2;
+                    break;
+                case 6:
+                    doomsDays = 3;
+                    break;
+            }
         }
         return doomsDays;
     }
@@ -323,6 +448,31 @@ public class FirstDayCheck {
         //0,1,2,3,4,5,6 = 일,월,화,수,목,금,토
         if (leapYear == 0) { //8월 8일 -7 ( -7 )
             monthDaysArr[1] = 28;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 0;
+                    break;
+                case 1:
+                    doomsDays = 1;
+                    break;
+                case 2:
+                    doomsDays = 2;
+                    break;
+                case 3:
+                    doomsDays = 3;
+                    break;
+                case 4:
+                    doomsDays = 4;
+                    break;
+                case 5:
+                    doomsDays = 5;
+                    break;
+                case 6:
+                    doomsDays = 6;
+                    break;
+            }
+        }else if(leapYear == 1) { //8월 8일 -7 ( -7 )
+            monthDaysArr[1] = 29;
             switch (doomsDays) {
                 case 0:
                     doomsDays = 0;
@@ -377,6 +527,31 @@ public class FirstDayCheck {
                     doomsDays = 2;
                     break;
             }
+        }else if(leapYear == 1) { //9월 5일 -4
+            monthDaysArr[1] = 29;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 3;
+                    break;
+                case 1:
+                    doomsDays = 4;
+                    break;
+                case 2:
+                    doomsDays = 5;
+                    break;
+                case 3:
+                    doomsDays = 6;
+                    break;
+                case 4:
+                    doomsDays = 0;
+                    break;
+                case 5:
+                    doomsDays = 1;
+                    break;
+                case 6:
+                    doomsDays = 2;
+                    break;
+            }
         }
         return doomsDays;
     }
@@ -408,9 +583,35 @@ public class FirstDayCheck {
                     doomsDays = 4;
                     break;
             }
+        } else if (leapYear == 1) {
+            monthDaysArr[1] = 29;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 5;
+                    break;
+                case 1:
+                    doomsDays = 6;
+                    break;
+                case 2:
+                    doomsDays = 0;
+                    break;
+                case 3:
+                    doomsDays = 1;
+                    break;
+                case 4:
+                    doomsDays = 2;
+                    break;
+                case 5:
+                    doomsDays = 3;
+                    break;
+                case 6:
+                    doomsDays = 4;
+                    break;
+            }
         }
         return doomsDays;
     }
+
 
     private static int november(int leapYear, int doomsDays, int[] monthDaysArr) {
         //0,1,2,3,4,5,6 = 일,월,화,수,목,금,토
@@ -439,9 +640,35 @@ public class FirstDayCheck {
                     doomsDays = 0;
                     break;
             }
+        } else if (leapYear == 1) { //11월 7일 -6
+            monthDaysArr[1] = 29;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 1;
+                    break;
+                case 1:
+                    doomsDays = 2;
+                    break;
+                case 2:
+                    doomsDays = 3;
+                    break;
+                case 3:
+                    doomsDays = 4;
+                    break;
+                case 4:
+                    doomsDays = 5;
+                    break;
+                case 5:
+                    doomsDays = 6;
+                    break;
+                case 6:
+                    doomsDays = 0;
+                    break;
+            }
         }
         return doomsDays;
     }
+
 
     private static int december(int leapYear, int doomsDays, int[] monthDaysArr) {
         //0,1,2,3,4,5,6 = 일,월,화,수,목,금,토
@@ -470,9 +697,32 @@ public class FirstDayCheck {
                     doomsDays = 2;
                     break;
             }
+        } else if (leapYear == 1) { //12월 12일 -11 ( -7 + -4 )
+            monthDaysArr[1] = 29;
+            switch (doomsDays) {
+                case 0:
+                    doomsDays = 3;
+                    break;
+                case 1:
+                    doomsDays = 4;
+                    break;
+                case 2:
+                    doomsDays = 5;
+                    break;
+                case 3:
+                    doomsDays = 6;
+                    break;
+                case 4:
+                    doomsDays = 0;
+                    break;
+                case 5:
+                    doomsDays = 1;
+                    break;
+                case 6:
+                    doomsDays = 2;
+                    break;
+            }
         }
         return doomsDays;
     }
-
-
 }
