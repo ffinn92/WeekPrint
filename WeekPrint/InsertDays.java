@@ -8,7 +8,7 @@ public class InsertDays {
 
     void insertDays() {
         for (int i = 0; i < 1; i++) {
-            for (int j = InputCheckDays.doomsDays; j < 7; j++) {
+            for (int j = FirstDayCheck.doomsDays; j < 7; j++) {
                 inputDays++;
                 calender[i][j] = inputDays;
             }

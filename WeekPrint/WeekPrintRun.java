@@ -26,6 +26,9 @@ public class WeekPrintRun {
             run();
         }else if(yesOrNo.equals("N")){
             System.exit(0);
+        }else{
+            System.out.println("실행여부를 명확하게 다시 입력해주세요");
+            reRun();
         }
     }
 }

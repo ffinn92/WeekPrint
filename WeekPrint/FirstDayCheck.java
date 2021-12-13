@@ -8,50 +8,45 @@ public class FirstDayCheck {
             {0, 0, 0, 0, 0, 0, 0},
     };
     public static int[] monthDaysArr = {31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-
-    private int month = InputCheckDays.month;
-    private int leapYear = InputCheckDays.leapYear;
-    private int doomsDays = InputCheckDays.doomsDays;
-
-    InputCheckDays inputCheckDays = new InputCheckDays();
+    public static int doomsDays;
 
     void firstDaysCheck(){
-        switch (month) {
+        switch (InputCheckDays.month) {
             case 1:
-                doomsDays = january(leapYear, doomsDays, monthDaysArr);
+                doomsDays = january(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 2:
-                doomsDays = february(leapYear, doomsDays, monthDaysArr);
+                doomsDays = february(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 3:
-                doomsDays = march(leapYear, doomsDays, monthDaysArr);
+                doomsDays = march(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 4:
-                doomsDays = april(leapYear, doomsDays, monthDaysArr);
+                doomsDays = april(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 5:
-                doomsDays = may(leapYear, doomsDays, monthDaysArr);
+                doomsDays = may(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 6:
-                doomsDays = june(leapYear, doomsDays, monthDaysArr);
+                doomsDays = june(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 7:
-                doomsDays = july(leapYear, doomsDays, monthDaysArr);
+                doomsDays = july(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 8:
-                doomsDays = august(leapYear, doomsDays, monthDaysArr);
+                doomsDays = august(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 9:
-                doomsDays = september(leapYear, doomsDays, monthDaysArr);
+                doomsDays = september(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 10:
-                doomsDays = october(leapYear, doomsDays, monthDaysArr);
+                doomsDays = october(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 11:
-                doomsDays = november(leapYear, doomsDays, monthDaysArr);
+                doomsDays = november(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
             case 12:
-                doomsDays = december(leapYear, doomsDays, monthDaysArr);
+                doomsDays = december(InputCheckDays.leapYear, InputCheckDays.doomsDays, monthDaysArr);
                 break;
 
         }
