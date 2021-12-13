@@ -9,6 +9,7 @@ public class OutputPrint {
                 } else if (calender[0][0] != 0) {
                     System.out.println(InputCheckDays.week + "주차는" + " " + calender[0][FirstDayCheck.doomsDays] + "일부터 " + calender[0][0] + "일까지 입니다.");
                 }
+                resetCalendar();
                 break;
             case 2:
                 if (calender[0][0] == 0) {
@@ -16,6 +17,7 @@ public class OutputPrint {
                 } else if (calender[0][0] != 0) {
                     System.out.println(InputCheckDays.week + "주차는" + " " + calender[0][1] + "일부터 " + calender[1][0] + "일까지 입니다.");
                 }
+                resetCalendar();
                 break;
             case 3:
                 if (calender[0][0] == 0) {
@@ -23,6 +25,7 @@ public class OutputPrint {
                 } else if (calender[0][0] != 0) {
                     System.out.println(InputCheckDays.week + "주차는" + " " + calender[1][1] + "일부터 " + calender[2][0] + "일까지 입니다.");
                 }
+                resetCalendar();
                 break;
             case 4:
                 if (calender[0][0] == 0) {
@@ -41,9 +44,7 @@ public class OutputPrint {
                         System.out.println(InputCheckDays.week + "주차는" + " " + "해당 월에 존재하지 않습니다.");
                     } else if (calender[5][0] == 0) {
                         System.out.println(InputCheckDays.week + "주차는" + " " + calender[4][1] + "일부터 " + calender[InsertDays.lastDayX][InsertDays.lastDayY] + "일까지 입니다.");
-                    } else if (calender[5][1] != 0) {
-                        System.out.println(InputCheckDays.week + "주차는" + " " + calender[4][1] + "일부터 " + calender[5][0] + "일까지 입니다.");
-                    } else {
+                    } else if ((calender[5][1] != 0) || (calender[5][0] != 0)) {
                         System.out.println(InputCheckDays.week + "주차는" + " " + calender[4][1] + "일부터 " + calender[5][0] + "일까지 입니다.");
                     }
                 } else if (calender[0][0] != 0) {
@@ -53,6 +54,7 @@ public class OutputPrint {
                         System.out.println(InputCheckDays.week + "주차는" + " " + calender[3][1] + "일부터 " + calender[4][0] + "일까지 입니다.");
                     }
                 }
+                resetCalendar();
                 break;
             case 6:
                 if (calender[0][0] == 0) {
@@ -68,7 +70,16 @@ public class OutputPrint {
                         System.out.println(InputCheckDays.week + "주차는" + " " + "해당 월에 존재하지 않습니다.");
                     }
                 }
+                resetCalendar();
                 break;
+        }
+    }
+
+    private void resetCalendar() {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
+                calender[i][j] = 0;
+            }
         }
     }
 }

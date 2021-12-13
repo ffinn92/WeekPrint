@@ -321,29 +321,29 @@ public class FirstDayCheck {
 
     private static int august(int leapYear, int doomsDays, int[] monthDaysArr) {
         //0,1,2,3,4,5,6 = 일,월,화,수,목,금,토
-        if (leapYear == 0) { //8월 8일 -7 ( -7 + -1 )
+        if (leapYear == 0) { //8월 8일 -7 ( -7 )
             monthDaysArr[1] = 28;
             switch (doomsDays) {
                 case 0:
-                    doomsDays = 6;
-                    break;
-                case 1:
                     doomsDays = 0;
                     break;
-                case 2:
+                case 1:
                     doomsDays = 1;
                     break;
-                case 3:
+                case 2:
                     doomsDays = 2;
                     break;
-                case 4:
+                case 3:
                     doomsDays = 3;
                     break;
-                case 5:
+                case 4:
                     doomsDays = 4;
                     break;
-                case 6:
+                case 5:
                     doomsDays = 5;
+                    break;
+                case 6:
+                    doomsDays = 6;
                     break;
             }
         }
